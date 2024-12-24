@@ -1,0 +1,22 @@
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
+    basic.pause(1000)
+    maqueen.motorStop(maqueen.Motors.All)
+    basic.pause(1000)
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 100)
+    basic.pause(1000)
+    maqueen.motorStop(maqueen.Motors.All)
+    maqueen.setColor(0x0000ff)
+    maqueen.writeLED(maqueen.Led.LedAll, maqueen.LedSwitch.LedOn)
+    basic.pause(1000)
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
+    basic.pause(1000)
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 100)
+    basic.pause(1000)
+    maqueen.motorStop(maqueen.Motors.All)
+    maqueen.writeLED(maqueen.Led.LedAll, maqueen.LedSwitch.LedOff)
+    maqueen.setColor(0x000000)
+})
+basic.forever(function () {
+	
+})
