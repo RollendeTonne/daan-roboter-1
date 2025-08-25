@@ -1,3 +1,10 @@
+input.onSound(DetectedSound.Loud, function () {
+    music.playMelody("C5 E A D G C D D ", 120)
+    basic.setLedColors(0x0000ff, 0x7f00ff, 0x007fff)
+    if (maqueen.irRead() == 0) {
+        basic.turnRgbLedOff()
+    }
+})
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
     basic.pause(1000)
@@ -16,7 +23,4 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     maqueen.motorStop(maqueen.Motors.All)
     maqueen.writeLED(maqueen.Led.LedAll, maqueen.LedSwitch.LedOff)
     maqueen.setColor(0x000000)
-})
-basic.forever(function () {
-	
 })
